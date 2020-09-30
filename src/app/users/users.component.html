@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>All Users</h1>
+  <div class="table table-bordered">
+    <tr class="bg-warning">
+      <th>Id</th>
+      <th>Name</th>
+      <th>City</th>
+      <th>Know More</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.city }}</td>
+      <td><a [routerLink]="['/user', user.id]"> Click Here </a></td>
+    </tr>
+  </div>
+</div>
